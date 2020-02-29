@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "associate-bio-form-client-side-solution",
+    "id": "d566a12b-127d-4a70-b303-c00ca0552087",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false
+  },
+  "paths": {
+    "zippedPackage": "solution/associate-bio-form.sppkg"
+  }
+}
