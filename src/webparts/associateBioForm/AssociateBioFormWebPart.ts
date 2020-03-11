@@ -5,8 +5,7 @@ import { BaseClientSideWebPart, IPropertyPaneConfiguration, PropertyPaneTextFiel
 import * as strings from 'AssociateBioFormWebPartStrings';
 import AssociateBioForm from './components/AssociateBioForm';
 import { IAssociateBioFormProps } from './components/IAssociateBioFormProps';
-import { sp } from "@pnp/sp"; 
-
+import { sp } from "@pnp/sp";
 
 export interface IAssociateBioFormWebPartProps {
   description: string;
@@ -16,20 +15,18 @@ export default class AssociateBioFormWebPart extends BaseClientSideWebPart<IAsso
 
 
   public onInit(): Promise<void> {
-    
-    console.log("onInIt called");
+    console.log("onInit");
     return super.onInit().then(_ => {
       sp.setup({
         spfxContext: this.context,
-    
+      });
+
     });
-  
-    });
-    
+
   }
   public render(): void {
-    console.log("render called");
-    const element: React.ReactElement<IAssociateBioFormProps > = React.createElement(
+    console.log("render");
+    const element: React.ReactElement<IAssociateBioFormProps> = React.createElement(
       AssociateBioForm,
       {
         description: this.properties.description,
